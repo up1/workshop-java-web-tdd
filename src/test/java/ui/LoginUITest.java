@@ -31,7 +31,6 @@ public class LoginUITest {
 	@Test
 	public void loginSuccess() {
 		driver.get("http://localhost:8080/demo/");
-		
 		driver.findElement(By.id("user")).sendKeys("demo");
 		driver.findElement(By.id("pin")).sendKeys("pass");
 		driver.findElement(By.id("login")).submit();
