@@ -6,12 +6,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class UserDao {
+	
+	Connection connection;
+	
+	public void setConnection(Connection connection) {
+		this.connection = connection;
+	}	
 
 	public boolean checkUser(String user, String pin) {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-			Connection connection 
-			= DriverManager.getConnection("jdbc:mysql://localhost/for_test?user=root&password=123456");
 			PreparedStatement preparedStatement 
 			= connection.prepareStatement("select user, pin from user where user=? and pin=?");
 			preparedStatement.setString(1, user);
@@ -21,7 +24,7 @@ public class UserDao {
 				return true;
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 		return false;
 	}

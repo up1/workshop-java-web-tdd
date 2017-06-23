@@ -2,7 +2,13 @@ package demo.service;
 
 import demo.dao.UserDao;
 
-public class LoginService {
+public class LoginService { 
+	
+	UserDao userDao;
+
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
 
 	public boolean checkUser(String user, String pin) {
 		if(user == null || "".equals(user.trim())) {
@@ -11,8 +17,8 @@ public class LoginService {
 		if(pin == null || "".equals(pin.trim())) {
 			throw new InputInvalidException("Pin invalid");
 		}
-		UserDao userDao = new UserDao();
-		return userDao.checkUser(user, pin);
+		
+		return userDao.checkUser(user, pin);	
 	}
 
 }

@@ -3,6 +3,8 @@ package ui;
 import static org.junit.Assert.*;
 
 import org.junit.After;
+import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,17 +14,22 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginUITest {
+	
 	WebDriver driver;
+	
+	@Before
+	public void setupBrowser() {
+		System.setProperty("webdriver.chrome.driver", "/Users/somkiat/Downloads/chromedriver");
+		driver = new ChromeDriver();
+	}
 	
 	@After
 	public void closeBrowser() {
 		driver.close();
 	}
 	
-	@Test
+	@Test @Ignore
 	public void loginSuccess() {
-		System.setProperty("webdriver.chrome.driver", "/Users/somkiat/Downloads/chromedriver");
-		driver = new ChromeDriver();
 		driver.get("http://localhost:8080/demo/");
 		
 		driver.findElement(By.id("user")).sendKeys("somkiat");
@@ -34,7 +41,7 @@ public class LoginUITest {
 		boolean isOk = wait.until(new ExpectedCondition<Boolean>() {
 
 			public Boolean apply(WebDriver webDriver) {
-				return webDriver.getPageSource().contains("สวัสดีจ๊ะ1");
+				return webDriver.getPageSource().contains("สวัสดีจ๊ะ");
 			}
 		});
 		
