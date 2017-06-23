@@ -19,21 +19,21 @@ public class LoginUITest {
 	
 	@Before
 	public void setupBrowser() {
-		System.setProperty("webdriver.chrome.driver", "/Users/somkiat/Downloads/chromedriver");
+//		System.setProperty("webdriver.chrome.driver", "/Users/somkiat2/Downloads/chromedriver");
 		driver = new ChromeDriver();
 	}
 	
 	@After
-	public void closeBrowser() {
-		driver.close();
+	public void closeBrowser() { 
+//		driver.close();
 	}
 	
-	@Test @Ignore
+	@Test
 	public void loginSuccess() {
 		driver.get("http://localhost:8080/demo/");
 		
-		driver.findElement(By.id("user")).sendKeys("somkiat");
-		driver.findElement(By.id("pin")).sendKeys("123");
+		driver.findElement(By.id("user")).sendKeys("demo");
+		driver.findElement(By.id("pin")).sendKeys("pass");
 		driver.findElement(By.id("login")).submit();
 		
 		Wait<WebDriver> wait = new WebDriverWait(driver, 5);

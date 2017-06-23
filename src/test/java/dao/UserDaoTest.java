@@ -19,9 +19,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import demo.dao.DatabaseUserDao;
 import demo.dao.UserDao;
 
-public class UserDaoTest {
+public class UserDaoTest { 
 	
 	private static final String JDBC_DRIVER = org.h2.Driver.class.getName();
     private static final String JDBC_URL = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1";
@@ -59,23 +60,22 @@ public class UserDaoTest {
     		return dataSource;
     }
 
+    UserDao userDao = new DatabaseUserDao();
+	
 	@Test
 	public void success_with_user_and_pin() throws SQLException {
-		UserDao userDao = new UserDao();
 		userDao.setConnection(getDatasource().getConnection());
 		assertTrue(userDao.checkUser("demo", "pass"));
 	}
 	
 	@Test
 	public void user_not_found_with_user_and_pin() throws SQLException {
-		UserDao userDao = new UserDao();
 		userDao.setConnection(getDatasource().getConnection());
 		assertFalse(userDao.checkUser("demo1", "pass1"));
 	}
 	
 	@Test
 	public void fail_with_null_connection() throws SQLException {
-		UserDao userDao = new UserDao();
 		userDao.setConnection(null);
 		assertFalse(userDao.checkUser("demo1", "pass1"));
 	}
