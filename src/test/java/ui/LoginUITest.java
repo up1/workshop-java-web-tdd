@@ -19,13 +19,13 @@ public class LoginUITest {
 	
 	@Before
 	public void setupBrowser() {
-//		System.setProperty("webdriver.chrome.driver", "/Users/somkiat2/Downloads/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Users/somkiat/Downloads/chromedriver");
 		driver = new ChromeDriver();
 	}
 	
 	@After
 	public void closeBrowser() { 
-//		driver.close();
+		driver.close();
 	}
 	
 	@Test
