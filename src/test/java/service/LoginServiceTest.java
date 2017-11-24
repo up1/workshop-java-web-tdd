@@ -12,7 +12,7 @@ import demo.service.LoginService;
 public class LoginServiceTest {
 
 	@Test
-	public void success3() {
+	public void success4() {
 		LoginService loginService = new LoginService();
 		loginService.setUserDao(new UserDaoWithSuccess());
 		assertFalse(loginService.checkUser("demo", "pass"));
