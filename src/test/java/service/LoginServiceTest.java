@@ -12,12 +12,33 @@ import demo.service.LoginService;
 public class LoginServiceTest {
 
 	@Test
+	public void success4() {
+		LoginService loginService = new LoginService();
+		loginService.setUserDao(new UserDaoWithSuccess());
+		assertTrue(loginService.checkUser("demo", "pass"));
+	}
+
+	@Test
+	public void success2() {
+		LoginService loginService = new LoginService();
+		loginService.setUserDao(new UserDaoWithSuccess());
+		assertTrue(loginService.checkUser("demo", "pass"));
+	}
+
+	@Test
+	public void success3() {
+		LoginService loginService = new LoginService();
+		loginService.setUserDao(new UserDaoWithSuccess());
+		assertTrue(loginService.checkUser("demo", "pass"));
+	}
+
+	@Test
 	public void success() {
 		LoginService loginService = new LoginService();
 		loginService.setUserDao(new UserDaoWithSuccess());
 		assertTrue(loginService.checkUser("demo", "pass"));
 	}
-	
+
 	@Test
 	public void failure() {
 		LoginService loginService = new LoginService();
@@ -35,7 +56,7 @@ class UserDaoWithFailure implements UserDao {
 
 	public void setConnection(Connection connection) {
 	}
-	
+
 }
 
 class UserDaoWithSuccess implements UserDao {
@@ -46,5 +67,5 @@ class UserDaoWithSuccess implements UserDao {
 
 	public void setConnection(Connection connection) {
 	}
-	
+
 }
