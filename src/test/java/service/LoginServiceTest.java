@@ -12,6 +12,13 @@ import demo.service.LoginService;
 public class LoginServiceTest {
 
 	@Test
+	public void success3() {
+		LoginService loginService = new LoginService();
+		loginService.setUserDao(new UserDaoWithSuccess());
+		assertFalse(loginService.checkUser("demo", "pass"));
+	}
+
+	@Test
 	public void success2() {
 		LoginService loginService = new LoginService();
 		loginService.setUserDao(new UserDaoWithSuccess());
