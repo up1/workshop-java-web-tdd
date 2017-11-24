@@ -15,7 +15,7 @@ public class LoginServiceTest {
 	public void success4() {
 		LoginService loginService = new LoginService();
 		loginService.setUserDao(new UserDaoWithSuccess());
-		assertFalse(loginService.checkUser("demo", "pass"));
+		assertTrue(loginService.checkUser("demo", "pass"));
 	}
 
 	@Test
