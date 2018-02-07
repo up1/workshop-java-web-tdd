@@ -1,5 +1,5 @@
 pipeline {
-  node {
+  
      stages {
        stage('Pullcode') {
          git 'https://github.com/up1/workshop-java-web-tdd.git'
@@ -19,6 +19,6 @@ pipeline {
         always {
             junit 'target/surefire-reports/*.xml'
         }
-    }
+      }
    }
 }
