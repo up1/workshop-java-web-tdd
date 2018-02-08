@@ -10,7 +10,7 @@ Login success with somkiat
 
 *** Keywords ***
 สามารถเข้าระบบงานได้
-  Wait Until Page Contains    สวัสดีจ๊ะ22222
+  Wait Until Page Contains    สวัสดีจ๊ะ
 
 กรอก username และ password
   Input Text  id=user   demo
