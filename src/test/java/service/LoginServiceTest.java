@@ -51,7 +51,7 @@ public class LoginServiceTest {
 class UserDaoWithFailure implements UserDao {
 
 	public boolean checkUser(String user, String pin) {
-		return true;
+		return false;
 	}
 
 	public void setConnection(Connection connection) {
