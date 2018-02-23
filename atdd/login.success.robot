@@ -18,7 +18,7 @@ Login success with somkiat
   Click Button   เข้าสิจ๊ะ
 
 เข้าหน้า login
-  Open Browser   http://localhost:8082/demo/
+  Open Browser   http://localhost:8080/demo/
   ...  browser=chrome
-  ...  remote_url=http://localhost:4444/wd/hub
-  ...  desired_capabilities=browserName:chrome,platform:MAC,platformName:MAC
+  #...  remote_url=http://localhost:4444/wd/hub
+  #...  desired_capabilities=browserName:chrome,platform:MAC,platformName:MAC
