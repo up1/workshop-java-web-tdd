@@ -69,7 +69,7 @@ class UserDaoWithFailure implements UserDao {
 class UserDaoWithSuccess implements UserDao {
 
 	public boolean checkUser(String user, String pin) {
-		return true;
+		return false;
 	}
 
 	public void setConnection(Connection connection) {
