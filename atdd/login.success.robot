@@ -2,6 +2,9 @@
 Library   Selenium2Library
 Test Teardown   Close Browser
 
+*** Variables ***
+${URL}  http://localhost:8082/demo/
+
 *** Testcases ***
 Login success with somkiat
   เข้าหน้า login
@@ -18,7 +21,7 @@ Login success with somkiat
   Click Button   เข้าสิจ๊ะ
 
 เข้าหน้า login
-  Open Browser   http://localhost:8080/demo/
+  Open Browser   ${URL}
   ...  browser=chrome
   #...  remote_url=http://localhost:4444/wd/hub
   #...  desired_capabilities=browserName:chrome,platform:MAC,platformName:MAC
