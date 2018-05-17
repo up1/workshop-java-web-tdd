@@ -43,7 +43,7 @@ public class LoginServiceTest {
 	public void success() {
 		LoginService loginService = new LoginService();
 		loginService.setUserDao(new UserDaoWithSuccess());
-		assertFalse(loginService.checkUser("demo", "pass"));
+		assertTrue(loginService.checkUser("demo", "pass"));
 	}
 
 	@Test
