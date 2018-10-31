@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <h1>Login คือ ระบบที่ทุกระบบต้องมี at SWPARK 2018/09/13</h1>
+   <h1>Login at IMC 2018/10/31</h1>
 
 	<form action="/demo/login">
 		<table>
@@ -23,7 +23,7 @@
 		 <tr>
 		    <td></td>
 		    <td>
-		    <input type="submit" id="login" value="เข้าสิจ๊ะ">
+		    <input type="submit" id="login" value="Login">
 		    </td>
 		</tr>
 		</table>

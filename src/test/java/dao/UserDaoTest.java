@@ -33,6 +33,7 @@ public class UserDaoTest {
     @BeforeClass
     public static void createSchema() throws Exception {
         RunScript.execute(JDBC_URL, USER, PASSWORD, "schema/user.sql", Charset.forName(UTF8), false);
+		RunScript.execute(JDBC_URL, USER, PASSWORD, "schema/user.sql", Charset.forName(UTF8), false);
     }
 
     @Before
@@ -80,7 +81,7 @@ public class UserDaoTest {
 		assertFalse(userDao.checkUser("demo1", "pass1"));
 	}
 
-	// @Test
+	@Test
 	public void fail_with_null_connection() throws SQLException {
 		userDao.setConnection(null);
 		assertFalse(userDao.checkUser("demo1", "pass1"));

@@ -1,1 +1,9 @@
-docker run  -d --name  db  -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=for_test  mysql:latest
+docker container run  -d --name  db  -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=for_test  mysql:latest
+
+
+docker container rm -f web
+docker container run -d --name web -p 8080:8080 -v $(pwd)/demo.war:/usr/local/tomcat/webapps/demo.war tomcat:9.0.12-jre8
+
+
+mvn clean package
+

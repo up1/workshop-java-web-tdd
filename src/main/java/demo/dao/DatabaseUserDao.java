@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 
 public class DatabaseUserDao implements UserDao {
 	
-	Connection connection;
+	private Connection connection;
 	
 	public void setConnection(Connection connection) {
 		this.connection = connection; 

@@ -1,0 +1,2 @@
+docker container rm -f db
+docker container run --name db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=demo mysql:5.6
