@@ -72,7 +72,7 @@ public class UserDaoTest {
 	@Test
 	public void user_not_found_with_user_and_pin() throws SQLException {
 		userDao.setConnection(getDatasource().getConnection());
-		assertTrue(userDao.checkUser("demo1", "pass1"));
+		assertFalse(userDao.checkUser("demo1", "pass1"));
 	}
 	
 	@Test
