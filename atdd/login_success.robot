@@ -1,5 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
+Test Teardown  Close Browser
 
 *** Test Case ***
 Login success
