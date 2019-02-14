@@ -2,6 +2,10 @@
 Library   SeleniumLibrary
 Test Teardown  Close Browser
 
+*** Variables ***
+${URL}   http://localhost:8088/demo/
+${BROWSER}   chrome
+
 *** Test Case ***
 Login success
     เข้ามาหน้า login
@@ -18,5 +22,5 @@ login ด้วยผู้ใช้งานชื่อ somkiat
     Click Button   Login
 
 เข้ามาหน้า login
-    Open Browser   http://localhost:8088/demo/
-    ...  browser=chrome
+    Open Browser   ${URL}
+    ...  browser=${BROWSER}
