@@ -1,8 +1,5 @@
 # workshop-java-web-tdd
 
-TEST TEST TEST 
-SWPARK 2
-
 How to run ?
 
 ```
