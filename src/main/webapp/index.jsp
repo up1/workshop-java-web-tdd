@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <h1>Login at Microservices Workshop</h1>
+   <h1>Login at CI/CD Workshop</h1>
 
 	<form action="/demo/login">
 		<table>
