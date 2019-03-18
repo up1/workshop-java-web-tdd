@@ -1,6 +1,6 @@
 # workshop-java-web-tdd update !!!
 
-How to run ?
+How to run?
 
 ```
 $mvn clean package
