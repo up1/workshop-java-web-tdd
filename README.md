@@ -1,4 +1,4 @@
-# workshop-java-web-tdd update
+# workshop-java-web-tdd
 
 How to run?
 
