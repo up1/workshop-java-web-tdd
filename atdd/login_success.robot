@@ -3,7 +3,7 @@ Library   SeleniumLibrary
 Test Teardown  Close Browser
 
 *** Variables ***
-${URL}   http://localhost:8088/demo/
+${URL}   http://localhost:8080/demo/
 ${BROWSER}   chrome
 
 *** Test Case ***
