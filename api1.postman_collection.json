@@ -14,7 +14,7 @@
 						"id": "c00fadf7-54de-45ac-939c-eae5b934e6db",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(2000);",
+							"    pm.response.to.have.status(200);",
 							"});",
 							"",
 							"pm.test(\"Check count user\", function () {",
