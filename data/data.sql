@@ -1,2 +1,2 @@
-INSERT INTO employees (user, pin)
+INSERT INTO user (user, pin)
 VALUES ('demo', 'pass');
