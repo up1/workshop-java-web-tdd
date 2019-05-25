@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  tomcat:
+    image: tomcat:9.0.20-jre8-alpine
+    ports:
+      - 8080:8080
+    volumes:
+      - "demo.war:/usr/local/tomcat/webapps/demo.war"
+
+  database:
+    image: mysql:5.7.26
+    depends_on:
+      - hub
+    environment:
+      - MYSQL_ROOT_PASSWORD: password
+      - MYSQL_DATABASE: demo
+    volumes:
+      - "~/data:/docker-entrypoint-initdb.d/"
