@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "da13981a-fb13-4728-83b9-8d6d310fe0f6",
+		"name": "api1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c00fadf7-54de-45ac-939c-eae5b934e6db",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check count user\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).to.eql(10);",
+							"});",
+							"",
+							"pm.test(\"Check first user\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0].username).to.eql('Bret');",
+							"    pm.expect(jsonData[0].email).to.eql('Sincere@april.biz');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
