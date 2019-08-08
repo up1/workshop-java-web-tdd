@@ -94,6 +94,7 @@
 						<format>xml</format>
 					</formats>
 				</configuration>
+				<!--
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -102,6 +103,7 @@
 						</goals>
 					</execution>
 				</executions>
+                                -->
 				<dependencies>
 					<dependency>
 						<groupId>org.ow2.asm</groupId>
