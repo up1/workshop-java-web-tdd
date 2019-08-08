@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <h1>Login at CI/CD Workshop 2019/05/25</h1>
+   <h1>Login at CI/CD Workshop 2019/08/08</h1>
 
 	<form action="/demo/login">
 		<table>
