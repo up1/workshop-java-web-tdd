@@ -24,7 +24,7 @@ import demo.dao.UserDao;
 
 public class UserDaoTest {
 
-	private static final String JDBC_DRIVER = org.h2.Driver.class.getName();
+    private static final String JDBC_DRIVER = org.h2.Driver.class.getName();
     private static final String JDBC_URL = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1";
     private static final String USER = "sa";
     private static final String PASSWORD = "";
