@@ -24,3 +24,5 @@ login ด้วยผู้ใช้งานชื่อ somkiat
 เข้ามาหน้า login
     Open Browser   ${URL}
     ...  browser=${BROWSER}
+    ...  remote_url=http://10.10.99.82:4444/wd/hub
+    ...  desired_capabilities=browserName:chrome
