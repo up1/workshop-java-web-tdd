@@ -1,8 +1,6 @@
 # workshop-java-web-tdd 
 
 How to run?
-
-
 ```
 $mvn clean package
 $mvn tomcat7:run
@@ -17,7 +15,3 @@ mvnw sonar:sonar
 -Dsonar.projectKey=pui 
 -Dsonar.projectName=pui
 ```
-
-
-
-
