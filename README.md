@@ -2,7 +2,8 @@
 
 How to run?
 ```
-$mvn clean package
+$mvnw clean test
+$mvnw package -DskipTests=true
 $mvn tomcat7:run
 ```
 
