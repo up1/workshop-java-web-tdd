@@ -14,7 +14,7 @@ Login success
 
 *** Keywords ***
 ต้องแสดงหน้า welcome
-    Wait Until Page Contains   TODO in workshop
+    Wait Until Page Contains   Not Found
 
 login ด้วยผู้ใช้งานชื่อ somkiat
     Input Text   id=user  somkiat
