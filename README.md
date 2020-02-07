@@ -4,6 +4,7 @@ How to run?
 ```
 $mvnw clean test
 $mvnw package -DskipTests=true
+$mvn cobertura:cobertura
 $mvn tomcat7:run
 ```
 
@@ -11,7 +12,7 @@ $mvn tomcat7:run
 
 Working with SonarQube
 ```
-mvnw sonar:sonar 
+$mvnw sonar:sonar 
 -Dsonar.host.url=http://10.10.99.82:9000 
 -Dsonar.projectKey=pui 
 -Dsonar.projectName=pui
