@@ -4,8 +4,8 @@ How to run?
 ```
 $mvnw clean test
 $mvnw package -DskipTests=true
-$mvn cobertura:cobertura
-$mvn tomcat7:run
+$mvnw cobertura:cobertura
+$mvnw tomcat7:run
 ```
 
 เข้าใช้งานที่ url http://localhost:8080/demo
