@@ -17,6 +17,3 @@ $mvnw sonar:sonar
 -Dsonar.projectKey=pui 
 -Dsonar.projectName=pui
 ```
-
-
-XXX
