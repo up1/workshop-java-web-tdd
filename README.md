@@ -3,8 +3,8 @@
 How to run?
 ```
 $mvnw clean test
-$mvnw package -DskipTests=true
 $mvnw cobertura:cobertura
+$mvnw package -DskipTests=true
 $mvnw tomcat7:run
 ```
 
