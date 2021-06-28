@@ -1,4 +1,4 @@
-# workshop-java-web-tdd
+# Workshop java web tdd
 
 How to run?
 ```
