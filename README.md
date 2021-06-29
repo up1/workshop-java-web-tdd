@@ -10,6 +10,13 @@ $mvnw tomcat7:run
 
 เข้าใช้งานที่ url http://localhost:8080/demo
 
+## Run with Docker
+```
+$docker container run -it --rm --name my-maven-project \
+  -v "$(pwd)":/usr/src/mymaven \
+  -w /usr/src/mymaven maven:3.3-jdk-8 mvn package -DskipTests=true
+```
+
 Deploy to server
 ```
 $docker container rm -f somkiat
