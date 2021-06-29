@@ -21,6 +21,12 @@ $docker container run -d --name web-tomcat \
    -p 9999:8080 tomcat:10.0.7-jdk8-openjdk-slim-buster
 ```
 
+## Create Docker image with multi-stage build
+```
+$docker image build -t java-demo .
+$docker container run -d -p 9898:8080 java-demo
+```
+
 Deploy to server
 ```
 $docker container rm -f somkiat
