@@ -40,5 +40,6 @@ $./mvnw sonar:sonar \
  -Dsonar.projectKey=pui \
  -Dsonar.projectName=pui \
  -Dsonar.login=admin \
- -Dsonar.password=password
+ -Dsonar.password=password \
+ -Dsonar.java.binaries=target/classes
 ```
