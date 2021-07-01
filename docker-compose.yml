@@ -14,4 +14,4 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: demo
     volumes:
-      - "~/data:/docker-entrypoint-initdb.d/"
+      - "./data:/docker-entrypoint-initdb.d/"
