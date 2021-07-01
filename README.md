@@ -35,8 +35,10 @@ $docker container run -d --name somkiat -p 8888:8080 -v $(pwd):/usr/local/tomcat
 
 Working with SonarQube
 ```
-$mvnw sonar:sonar 
--Dsonar.host.url=http://10.10.99.82:9000 
--Dsonar.projectKey=pui 
--Dsonar.projectName=pui
+$./mvnw sonar:sonar \
+ -Dsonar.host.url=http://128.199.199.84:9000 \
+ -Dsonar.projectKey=pui \
+ -Dsonar.projectName=pui \
+ -Dsonar.login=admin \
+ -Dsonar.password=password
 ```
