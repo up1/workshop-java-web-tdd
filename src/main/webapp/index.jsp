@@ -10,7 +10,7 @@
 
    <h1>Login at CI/CD Workshop 2021/06/28</h1>
 
-	<form action="/demo/login">
+	<form action="${pageContext.request.contextPath}/login">
 		<table>
 		<tr>
 		    <td>Username</td>
