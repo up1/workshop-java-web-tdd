@@ -37,7 +37,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>[8.0.16,)</version>
+			<version>8.0.16</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -69,6 +69,11 @@
 			<version>1.4.179</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    <groupId>org.owasp</groupId>
+    <artifactId>dependency-check-maven</artifactId>
+    <version>8.4.3</version>
+</dependency>
 
 	</dependencies>
 
@@ -128,6 +133,26 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version>
+			</plugin>
+
+			<plugin>
+              <groupId>org.owasp</groupId>
+              <artifactId>dependency-check-maven</artifactId>
+              <version>8.4.3</version>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>check</goal>
+                      </goals>
+                  </execution>
+              </executions>
+            </plugin>
+
 		</plugins>
 	</build>
 

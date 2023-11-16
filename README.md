@@ -6,6 +6,9 @@ $mvnw clean test
 $mvnw cobertura:cobertura
 $mvnw package -DskipTests=true
 $mvnw tomcat7:run
+
+// Run dependency check
+$mvnw verify -DskipTests=true
 ```
 
 เข้าใช้งานที่ url http://localhost:8080/demo
